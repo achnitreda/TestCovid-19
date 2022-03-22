@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="./Assets/CSS/question.css" rel="stylesheet" />
+
+    <title>Questionnaire</title>
+  </head>
+  <body>
+    <div class="card text-center container">
+      <div class="card-header">
+        <div class="progress">
+          <div
+            class="progress-bar progress-bar-striped progress-bar-animated"
+            role="progressbar"
+          ></div>
+        </div>
+      </div>
+      <div class="main">
+        <div class="card-body hide">
+          <p class="card-text" id="question">question text</p>
+        </div>
+        <div class="answers">
+          <a href="#" class="btn btn-primary">OUI✓</a>
+          <a href="#" class="btn btn-primary">NON✕</a>
+        </div>
+      </div>
+      <div class="card-footer text-muted controls">
+        <button id="pre-btn" class="pre-btn hide">Precedent</button>
+        <button id="next-btn" class="next-btn hide">Suivant</button>
+      </div>
+    </div>
+  </body>
+</html>
