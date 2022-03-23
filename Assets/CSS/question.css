@@ -130,5 +130,14 @@ body {
   border-top: none!important;
 }
 .progress-bar{
-    background-color: #1078AD;
+    background-color: #1078AD!important;
+}
+.all{
+    display: flex;
+    flex-direction: column;
+}
+.start-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
