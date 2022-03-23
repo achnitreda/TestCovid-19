@@ -1,0 +1,46 @@
+*{
+    font-family: "Cairo", sans-serif;
+}
+
+#bgnav{
+    background-image: url(../Images/navbar.svg);
+}
+
+.card-title{
+    color: #1078ad;
+}
+
+.card-text{
+    font-size: 30px;
+}
+
+.sresult{
+    border-top: 1px solid lightgrey;
+    color: #1078ad;
+}
+
+.recomm{
+    background-color: #cfe4ef;
+    color: #1078ad;
+    width: 200px;
+    border: 2px solid #1078ad;
+}
+
+.recomm:hover{
+    background-color: #1078ad;
+    color: white;
+}
+
+.inf{
+    color: #1078ad;
+}
+
+li{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+@media screen and (min-width: 576px) {
+    li{
+         border-bottom:none;
+     } 
+ }
