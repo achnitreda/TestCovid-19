@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accueil</title>
+    <link rel="stylesheet" href="Assets/CSS/home.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="shortcut icon"
+      href="./Assets/Images/Protect.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <main class="container-fluide d-flex flex-column">
+      <nav
+        class="navbar navbar-expand-lg navbar-light bg-light px-5 fs-5"
+        id="bgnav"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><img
+              src="Assets/Images/Coronavirus_protection_shield.png"
+              alt="logo"
+              width="50px"
+              height="50px"
+          /></a>
+          <div class="d-flex flex-row">
+            <a class="mx-3">
+              <img
+                src="Assets/Images/Maroc.png"
+                alt="langue"
+                width="40px"
+                height="40px"
+                style="border-radius: 50%"
+                class="d-flex d-sm-none"
+              />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarText"
+              aria-controls="navbarText"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul
+              class="navbar-nav ms-auto mb-2 mb-lg-0 mt-sm-3 d-flex flex-sm-row justify-content-end"
+            >
+              <li class="nav-item d-flex justify-content-center me-3">
+                <a
+                  class="nav-link active mx-2"
+                  aria-current="page"
+                  href="#"
+                  class="fs-6"
+                  style="color: #1078ad"
+                  >Accueil</a
+                >
+              </li>
+              <li class="nav-item d-flex justify-content-center me-3">
+                <a class="nav-link mx-2" href="#">Conseils</a>
+              </li>
+              <li class="nav-item align-content-center d-none d-sm-flex me-3">
+                <a>
+                  <img
+                    src="Assets/Images/Maroc.png"
+                    alt="langue"
+                    width="40px"
+                    height="40px"
+                    style="border-radius: 50%"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!--     -->
+
+      <div class="para py-3 px-2 px-sm-3">
+        <h3 class="mb-3">LA DERNIÈRE INFO MÉDICALE</h3>
+        <p class="px-5">
+          La prise d'anti-inflammatoires (ibuprofène, cortisone ...) pourrait
+          être un facteur d'aggravation de l’infection. En cas de fièvre, prenez
+          du paracétamol.<br />
+          N'arrêtez pas votre traitement ! Consultez votre médecin ou votre
+          pharmacien.
+        </p>
+      </div>
+
+      <div class="d-flex flex-column-reverse flex-md-row my-5 px-5" id="parent">
+        <div id="child1">
+          <h2>
+            Vous pensez avoir été exposé au Coronavirus COVID-19 et vous avez
+            des symptômes ?
+          </h2>
+          <div class="d-flex justify-content-center">
+            <img src="Assets/Images/icone1.svg" alt="" />
+          </div>
+          <p>
+            Je reste vigilant ? <br />
+            Je programme une téléconsultation ?<br />
+            J'appelle le 141 ?<br />
+            Faites le test pour répondre en citoyen éclairé selon vos symptômes.
+          </p>
+          <button class="btn-block btn-lg">
+            <a class="text-decoration-none text-white" href="./test.html">Démarrer le test</a>
+          </button>
+        </div>
+        <div id="child2">
+          <img src="Assets/Images/Group_80.png" alt="grp" />
+        </div>
+      </div>
+
+      <div class="contImg my-5 px-5">
+        <h1 class="mb-5">Quels sont les symptômes à surveiller ?</h1>
+        <div class="row d-flex flex-wrap">
+          <div class="col-6 d-flex flex-column justify-content-center">
+            <img src="Assets/Images/fievre.svg" alt="" class="fievre" />
+            <h5 class="d-flex justify-content-center">Fièvre</h5>
+          </div>
+          <div class="col-6 d-flex flex-column justify-content-center">
+            <img src="Assets/Images/naussees.svg" alt="" />
+            <h5 class="d-flex justify-content-center">
+              Nausées et vomissements
+            </h5>
+          </div>
+
+          <div class="col-6 d-flex flex-column justify-content-center">
+            <img src="Assets/Images/gene-respiratoire.svg" alt="" />
+            <h5 class="d-flex justify-content-center">Gêne respiratoire</h5>
+          </div>
+          <div class="col-6 d-flex flex-column justify-content-center">
+            <img src="Assets/Images/toux.svg" alt="" />
+            <h5 class="d-flex justify-content-center">Toux et maux de gorge</h5>
+          </div>
+        </div>
+      </div>
+      <!---->
+      <div class="container_ py-4">
+        <p class="fw-bolder text-white text-center fs-3 my-5">
+          Recommandations officielles
+        </p>
+        <div class="d-flex justify-content-around mt-5">
+          <p class="fw-bold text-white text-center fs-5">
+            Si vous pensez être malade, nous vous conseillons :
+          </p>
+        </div>
+
+        <div class="d-flex justify-content-around all px-5 py-3">
+          <div class="">
+            <div class="d-flex">
+              <p class="spann fw-bold fs-5">⚠</p>
+              <span class="fs-5 text-white">Evitez les endroits publics.</span>
+            </div>
+            <div class="d-flex">
+              <p class="spann fw-bold fs-5">⚠</p>
+              <span class="fs-5 text-white"
+                >Ne rendez pas visite aux personnes fragiles.</span
+              >
+            </div>
+            <div class="d-flex">
+              <p class="spann fw-bold fs-5">⚠</p>
+              <span class="fs-5 text-white">Restez chez vous.</span>
+            </div>
+            <div class="d-flex">
+              <p class="spann fw-bold fs-5">⚠</p>
+              <span class="fs-5 text-white"
+                >Respectez les mesures barrière (lavage de main, masque).</span
+              >
+            </div>
+            <div class="d-flex">
+              <p class="spann fw-bold fs-5">⚠</p>
+              <span class="fs-5 text-white"
+                >Surveillez vos symptômes, l’évolution de votre température
+                corporelle et recherchez un avis médical.</span
+              >
+            </div>
+          </div>
+          <div class="list_2">
+            <p class="p1 text-center fw-bold fs-3">Appelez</p>
+            <li class="list_ text-center fw-bold fs-3">141</li>
+            <br />
+            <li class="list_ text-center fw-bold fs-3">080 100 47 47</li>
+            <br />
+            <li class="list_ text-center fw-bold fs-3">300</li>
+          </div>
+        </div>
+      </div>
+      <div
+        class="div2 d-flex justify-content-center align-items-center flex-column py-5"
+      >
+        <p class="text fw-bold fs-4 px-3 paragraph">
+          Vous pensez avoir été exposé au Coronavirus COVID-19 et vous avez des
+          symptômes ?
+        </p>
+        <img class="image" src="Assets/Images/icone1.svg" alt="" />
+        <button class="bu fw-bold fs-4">
+          <a class="text-decoration-none text-white" href="./test.html">Démarrer le Test</a>
+        </button>
+      </div>
+
+      <footer>
+        <section id="logo">
+          <div class="container">
+            <div class="row">
+              <div class="col-12" id="box-foot">
+                <img
+                  src="Assets/Images/Protect.ico"
+                  alt="logo"
+                  width="50px"
+                  height="50px"
+                  id="footer-logo"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="liste">
+          <div class="container section-container">
+            <div class="d-flex flex-wrap justify-content-around">
+              <div id="contacte" class="col-lg-4 col-sm-12">
+                <h2 dir="rtl">Contacts Utiles</h2>
+                <p dir="rtl" class="num">
+                  Numéro économique - Allo veille épidémiologique
+                </p>
+                <h5 class="deko">080 100 47 47</h5>
+                <p dir="rtl" class="ace">Aide médicale urgente - Allo SAMU</p>
+                <h5 class="deko">141</h5>
+                <p dir="rtl" class="ace">
+                  la plateforme téléphonique- Allo 300
+                </p>
+                <h5 class="deko">300</h5>
+              </div>
+              <div class="col-8 col-sm-4 my-auto">
+                <ul id="footer-liste" class="list-group list-group-flush">
+                  <li class="list-group-item one" routerlinkactive="active">
+                    <a href="#" ng-reflect-dir="rtl" class="two fs-5 a1"
+                      >Accueil</a
+                    >
+                  </li>
+                  <li class="list-group-item one" routerlinkactive="active">
+                    <a href="#" ng-reflect-dir="rtl" class="two">Conseils</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </footer>
+      <div id="bottom-line"></div>
+
+      <!---->
+    </main>
+    <script src="./Assets/JS/test.js"></script>
+  </body>
+</html>
