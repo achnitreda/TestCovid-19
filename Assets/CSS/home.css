@@ -1,0 +1,247 @@
+*{
+    font-family: 'Cairo', sans-serif;
+}
+#bgnav{
+    background-image: url(../Images/Mergedbar-5.svg);
+}
+li{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.para{
+    text-align: center;
+    background-color: #F4CF1B;
+}
+h3{
+    color: #1078AD;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+}
+#parent{
+    width: 100%;
+    height: 900px;
+    max-height: 1100px;
+}
+
+#child1, #child2, #child2 img{
+width: 100%;
+height: 100%;
+}
+
+
+#child1 h2{
+    width: 100%;
+    font-size: 24px;
+    font-weight: 800;
+    text-align: justify;
+    -moz-text-align-last: center;
+    text-align-last: center;
+    color: #1078AD;
+    margin-bottom: 30px;
+}
+#child1 p{
+    width: 100%;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    color: #7F7F7F;
+    line-height: 35px;
+    margin-bottom: 30px;
+}
+#child1 button{
+        width: 100%;
+        font-size: 22px;
+        font-weight: 700;
+        text-align: right;
+        color: #1078AD;
+        background:url(../Images/Mergedbar-5.svg);
+        border: 2px solid #1078AD;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 10px;
+        text-align: center;
+}
+.contImg img{
+    height: 150px;
+}
+.contImg h5{
+    font-size: 24px;
+    font-weight: 700;
+    text-align: justify;
+    -moz-text-align-last: center;
+    text-align-last: center;
+    color: #1078AD;
+    margin-bottom: 30px;
+}
+#box-foot{
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#footer-logo{
+    width: 70px;
+    height: auto;
+}
+#contacte{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+h2{
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #1078AD;
+}
+.num{
+    font-size: 1em;
+    font-weight: 700;
+    color: #2B2B2C;
+}
+.deko{
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #369D53;
+}
+.ace{
+    font-size: 1em;
+    font-weight: 700;
+    color: #2B2B2C;
+}
+#footer-liste{
+    text-align: center;
+}
+.one{
+    border-bottom: 1px solid rgba(16, 121, 173, 0.5) !important;
+}
+.two{
+    color: #2B2B2C;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+}
+.a1{
+    color: #1078AD;
+}
+#bottom-line{
+    width: 100%;
+    height: 20px;
+    background-color: #1078AD;
+}
+.contImg h1{
+    text-align: center;
+    font-size: bold 70px;
+    letter-spacing: 0;
+    color: #1078AD;
+}
+.avFooter{
+    width: 100%;
+    height: 70vh;
+    background-color: #1078AD;
+}
+.avFooter h2{
+    margin-top: 30px;
+    text-align: center;
+    font: Bold 30px/35px Cairo;
+    letter-spacing: 0;
+    color: #fff;
+    margin-bottom: 40px;
+}
+.avFooter h5{
+    color: #F4CF1B;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    margin: 0 0 12px;
+}
+.avFooter .spn{
+    background-color: #F4CF1B;
+    width: 200px;
+    color: #1078AD;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.container_{
+    background-color:#1078AD;
+}
+
+.list_{
+    list-style: none;
+    color: #1078AD;
+    background-color: #F4CF1B;
+    width: 200px;
+    border-radius: 5px;
+}
+
+.p1{
+    Color: #F4CF1B;
+    width: 200px;
+}
+
+.paragraph{
+    color:#1078AD ;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.div2{
+    background-color:#96C5DC ;
+}
+.image{
+    width: 60px;
+    margin-bottom: 30px;
+}
+
+.bu{
+    width: 300px;
+    height: 53px;
+    color: #1078AD;
+    background-image:url(../Images/Mergedbar-5.svg);
+    border: 2px solid #1078AD;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+
+.bu:hover, #child1 button:hover{
+    background-color:#1078AD ;
+    color: white;
+}
+
+.spann{
+    color: #F4CF1B;
+    margin-right: 7px;
+}
+.all{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 576px) {
+   li{
+        border-bottom:none;
+    } 
+    #child2 img{
+        height: 90%;
+    }
+}
+@media screen and (min-width: 768px) {
+    .all{
+        flex-direction: row;
+    }
+    .bu{
+        width: 500px;
+    }
+    #child1, #child2{
+    width: 50%;
+    }
+    #parent{
+        height: 550px;
+    }    
+}
