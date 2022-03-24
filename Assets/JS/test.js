@@ -1,24 +1,215 @@
-let progress = document.querySelector(".progress-bar");
-let next = document.getElementById("next");
-let previous = document.getElementById("previous");
-let answerButtonsElement = document.getElementById('answers');
 const testBtn = document.querySelector(".start-btn");
+const questionnaire = document.querySelector(".questionnaire");
+const Préambule = document.querySelector(".Préambule");
+const stepper = document.querySelectorAll(".stepper h1");
+const nextBtn = document.querySelector(".next");
+const previousBtn = document.querySelector(".previous");
+const currentquestion = document.querySelector(".question");
+const answerInputs = document.querySelector(".answer-inputs");
+const progressBar = document.querySelector(".bar");
+const questionNumber = document.querySelector(".question-number");
+const animateBox = document.querySelector(".animation");
+const result = document.querySelector(".Préambule h1");
+const resultMessage = document.querySelectorAll(".Préambule p");
 
-let progBar = 0 ;
-next.addEventListener("click" , function(){
-   if(progBar < 100){
-    progBar += 4.5;
-    progress.style.width = progBar + "%";
-   }
-});
-previous.addEventListener("click" , function(e){
-    if( progBar > 0){
-     progBar -= 4.5;
-     progress.style.width = progBar + "%";
 
+
+testBtn.addEventListener("click", startTest);
+
+animateBox.addEventListener("input", (e) => {
+    const input = e.target;
+
+
+    if (input.type === "number") {
+        const number = parseFloat(input.value);
+
+        if (number >= input.min && number <= input.max) {
+            answers[input.name] = input.value;
+            console.log(answers);
+
+            nextBtn.disabled = false;
+        } else {
+            nextBtn.disabled = true;
+        }
+    } else {
+        answers[input.name] = input.id;
+        console.log(answers);
+        nextBtn.disabled = false;
     }
- })
- 
+});
+
+// ! :::::::::::::::::::     fuction
+
+let currentQuestionIndex = 0;
+
+function hideprevious() {
+    if (currentQuestionIndex === 0) {
+        previousBtn.classList.add("hide");
+    } else {
+        previousBtn.classList.remove("hide");
+    }
+}
+
+function startTest() {
+    stepper[0].classList.remove("select");
+    stepper[1].classList.add("select");
+    testBtn.style.display = "none";
+    Préambule.style.display = "none";
+    questionnaire.style.display = "block";
+    hideprevious();
+    nextBtn.disabled = true;
+    showQuestion(questions[currentQuestionIndex]);
+}
+
+nextBtn.addEventListener("click", () => {
+    if (currentQuestionIndex < 21) {
+        currentQuestionIndex++;
+        showQuestion(questions[currentQuestionIndex]);
+        folowProgress(currentQuestionIndex);
+        hideprevious();
+        transition("next");
+        nextBtn.disabled = true;
+        if (currentQuestionIndex === 21) {
+            nextBtn.innerText = "Terminer le test";
+            nextBtn.classList.add("result");
+            const resultBtn = document.querySelector(".result");
+            resultBtn.addEventListener("click", Results);
+        } else {
+            nextBtn.innerText = "Suivant";
+        }
+    }
+});
+
+previousBtn.addEventListener("click", () => {
+    currentQuestionIndex--;
+    showQuestion(questions[currentQuestionIndex]);
+    folowProgress(currentQuestionIndex);
+    hideprevious();
+    transition("previous");
+    nextBtn.disabled = true;
+    if (currentQuestionIndex === 21) {
+        nextBtn.innerText = "Terminer le test";
+    } else {
+        nextBtn.innerText = "Suivant";
+        nextBtn.classList.remove("result");
+    }
+});
+
+function showQuestion(question) {
+    currentquestion.innerText = question.question;
+    answerInputs.innerHTML = "";
+    const inputAnswer = question.input.answer;
+    const input = question.input;
+
+    if (question.input.type === "radio") {
+        inputAnswer.forEach((answer) => {
+            answerInputs.innerHTML += `
+                    <div>
+                        <input type="radio" name="${input.qNumber}" id="${answer.text}">
+                        <label for="${answer.text}">
+                        <i class="fas ${answer.icon}"></i>
+                        <span>${answer.text}</span> </label>
+                    </div>`;
+        });
+    } else {
+        answerInputs.innerHTML += `<input type="number" name="${input.qNumber}" id="${input.name}" min="${input.min}" max="${input.max}" placeholder="${input.min} - ${input.max}">
+                                    <span class="input-span">${input.name}</span>`;
+    }
+}
+
+function folowProgress(number) {
+    const currentNmber = number + 1;
+
+    questionNumber.innerText = currentNmber;
+    progressBar.style.width = `calc(${currentNmber} * calc(100% / 22))`;
+}
+
+function transition(frame) {
+    animateBox.style.animation = ` ${frame} .5s ease `;
+    animateBox.addEventListener("animationend", () => {
+        animateBox.style.animation = ``;
+    });
+}
+
+let answers = {};
+
+let severity = 0;
+
+function Results() {
+
+    if (answers["Q1"] === "Oui") {
+        severity++;
+    }
+
+
+    if (answers["Q8"] === "Oui" || answers["Q9"] === "Oui") {
+        severity++;
+    }
+
+
+    if (answers["Q10"] === "Fatigué(e)" || answers["Q10"] === "Très fatigué") {
+        severity++;
+    }
+
+
+    if (answers["Q14"] === "Oui" || answers["Q15"] === "Oui") {
+        severity++;
+    }
+
+
+    showResult(severity);
+
+
+}
+
+function showResult(severity) {
+    stepper[1].classList.remove("select");
+    stepper[2].classList.add("select");
+    testBtn.style.display = "block";
+    Préambule.style.display = "block";
+    questionnaire.style.display = "none";
+    testBtn.textContent = " Recommencer le test";
+    testBtn.addEventListener("click", () => {
+        window.location.reload();
+    });
+
+
+    result.innerText = "Résultats";
+
+    if (severity === 0) {
+        resultMessage[0].innerText =
+            "Votre situation ne relève probablement pas du Covid-19. N’hésitez pas à contacter votre médecin en cas de doute. Vous pouvez refaire le test en cas de nouveau symptôme pour réévaluer la situation. Pour toute information concernant le Covid-19, consulter la page Conseils";
+        resultMessage[1].innerText =
+            "Restez chez vous au maximum en attendant que les symptômes disparaissent. Prenez votre température deux fois par jour. Rappel des mesures d’hygiène.";
+        resultMessage[0].style.fontSize = "30px";
+        resultMessage[0].style.fontWeight = "bold";
+        resultMessage[0].style.color = "#787878";
+    } else if (severity === 1) {
+        resultMessage[0].innerText =
+            "Nous vous conseillons de rester à votre domicile et de contacter votre médecin en cas d’apparition de nouveaux symptômes. Vous pourrez aussi utiliser à nouveau l’application pour réévaluer vos symptômes";
+        resultMessage[1].innerText =
+            "Restez chez vous au maximum en attendant que les symptômes disparaissent. Prenez votre température deux fois par jour. Rappel des mesures d’hygiène.";
+        resultMessage[0].style.fontSize = "30px";
+        resultMessage[0].style.fontWeight = "bold";
+        resultMessage[0].style.color = "#787878";
+    } else if (severity === 2) {
+        resultMessage[0].innerText =
+            "Vous pouvez faire une téléconsultation ou médecin généraliste ou visite à domicile. Appelez le 141 si une gêne respiratoire ou des difficultés importantes pour s’alimenter ou boire pendant plus de 24h apparaissent.";
+        resultMessage[1].innerText =
+            "Restez chez vous au maximum en attendant que les symptômes disparaissent. Prenez votre température deux fois par jour. Rappel des mesures d’hygiène.";
+        resultMessage[0].style.fontSize = "30px";
+        resultMessage[0].style.fontWeight = "bold";
+        resultMessage[0].style.color = "#787878";
+    } else {
+        resultMessage[0].innerText = "Appelez le 141";
+        resultMessage[1].innerText =
+            "Restez chez vous au maximum en attendant que les symptômes disparaissent. Prenez votre température deux fois par jour. Rappel des mesures d’hygiène.";
+
+        resultMessage[0].style.color = "#d63031";
+        resultMessage[0].style.fontSize = "50px";
+        resultMessage[0].style.fontWeight = "bold";
+    }
+}
  
  
  
