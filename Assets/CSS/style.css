@@ -60,20 +60,32 @@ h3 {
   background-repeat: no-repeat;
   border-radius: 10px;
   text-align: center;
-}
-#child1 button a{
-  text-decoration: none;
   color: #1078ad;
 }
+.bu {
+  width: 300px;
+  height: 53px;
+  background-image: url(../Images/navbar.svg);
+  border: 2px solid #1078ad;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  color: #1078ad;
+}
+
+.bu:hover,
+#child1 button:hover {
+  background-color: #1078ad;
+  color: white;
+}
+
 .contImg img {
   height: 150px;
 }
 .contImg h5 {
   font-size: 24px;
   font-weight: 700;
-  text-align: justify;
-  -moz-text-align-last: center;
-  text-align-last: center;
+  text-align: center;
   color: #1078ad;
   margin-bottom: 30px;
 }
@@ -197,32 +209,6 @@ h2 {
 .image {
   width: 60px;
   margin-bottom: 30px;
-}
-
-.bu {
-  width: 300px;
-  height: 53px;
-  background-image: url(../Images/navbar.svg);
-  border: 2px solid #1078ad;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 10px;
-}
-
-.bu a{
-  text-decoration: none;
-  color: #1078ad;
-}
-
-.bu:hover,
-#child1 button:hover {
-  background-color: #1078ad;
-  color: white;
-}
-
-.bu a:hover,
-#child1 button a:hover {
-  color: white;
 }
 
 .spann {
