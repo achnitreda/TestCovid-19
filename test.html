@@ -4,43 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link href="./Assets/CSS/test.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
+    <link href="Assets/CSS/style.css" rel="stylesheet" />
     <link rel="stylesheet" href="Assets/CSS/my-bootstrap.css" />
-    <link rel="shortcut icon" href="./Assets/Images/Protect.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="Assets/Images/Protect.ico" type="image/x-icon">
     <title>Test-Covid-19</title>
   </head>
 
   <body>
-    <nav
-      class="navbar navbar-expand-lg navbar-light bg-light mb-2 px-5 fs-5"
-      id="bgnav"
-    >
-      <div class="container-sm container-fluid">
-        <a class="navbar-brand" href="./index.html"
-          ><img
-            src="./Assets/Images/Coronavirus_protection_shield.png"
-            alt=""
-            style="width: 80px; height: 80px"
-        /></a>
-        <div class="d-flex flex-row align-items-center">
-          <a class="mx-3 d-sm-none d-inline">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light px-5 fs-5" id="bgnav">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="Assets/Images/Coronavirus_protection_shield.png"
+            alt="logo"
+            width="50px"
+            height="50px"
+          />
+        </a>
+        <div class="d-flex flex-row">
+          <a class="mx-3">
             <img
-              src="./Assets/Images/Maroc.png"
-              alt="fr"
-              width="25px"
-              height="25px"
+              src="Assets/Images/Maroc.png"
+              alt="langue"
+              width="40px"
+              height="40px"
               style="border-radius: 50%"
               class="d-flex d-sm-none"
             />
           </a>
           <button
-            class="navbar-toggler border-1"
+            class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarText"
@@ -51,36 +45,35 @@
             <span class="navbar-toggler-icon"></span>
           </button>
         </div>
-        <div
-          class="collapse mt-sm-3 mt-lg-0 mb-0 navbar-collapse"
-          id="navbarText"
-        >
-          <ul
-            class="navbar-nav ms-auto mb-0 align-items-center flex-column flex-sm-row-reverse justify-content-start"
-          >
-            <li
-              class="nav-item align-content-center d-none align-self-center d-sm-flex me-3"
-            >
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 mt-sm-3 d-flex flex-sm-row justify-content-end">
+            <li class="nav-item d-flex justify-content-center me-3">
+              <a
+                class="nav-link mx-2"
+                aria-current="page"
+                href="index.html"
+                >Accueil</a
+              >
+            </li>
+            <li class="nav-item d-flex justify-content-center me-3">
+              <a class="nav-link mx-2" href="conseil.html">Conseils</a>
+            </li>
+            <li class="nav-item align-content-center d-none d-sm-flex me-3">
               <a>
                 <img
                   src="Assets/Images/Maroc.png"
-                  alt="fr"
-                  width="25px"
-                  height="25px"
+                  alt="langue"
+                  width="40px"
+                  height="40px"
                   style="border-radius: 50%"
                 />
               </a>
-            </li>
-            <li class="nav-item d-flex justify-content-center me-3">
-              <a class="nav-link text-dark mx-2" href="./index.html">Accueil</a>
-            </li>
-            <li class="nav-item d-flex justify-content-center me-3">
-              <a class="nav-link text-dark mx-2" href="./conseil.html">Conseils</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+
     <section class="stepper">
       <h1 class="select">Informations</h1>
       <h1>Questionnaire</h1>
@@ -111,7 +104,7 @@
       </p>
     </section>
 
-    <button class="start-btn">Demarer le test</button>
+    <button class="start-btn">Démarrer le test</button>
     <!------------------------------------- end  Préambule  section  ------------------------>
 
     <section class="questionnaire">
@@ -134,15 +127,17 @@
       </div>
     </section>
 
-    <!------------------------------------- start footer  ------------------------>
+    <!------------------------ footer  ------------------------>
     <footer>
       <section id="logo">
         <div class="container">
           <div class="row">
             <div class="col-12" id="box-foot">
               <img
-                src="./Assets/Images/Coronavirus_protection_shield.png" style="width: 80px; height: 80px"
-                alt="logo santee"
+                src="Assets/Images/Coronavirus_protection_shield.png"
+                alt="logo"
+                width="60px"
+                height="60px"
                 id="footer-logo"
               />
             </div>
@@ -151,8 +146,8 @@
       </section>
       <section id="liste">
         <div class="container section-container">
-          <div class="d-flex justify-content-around flex-wrap">
-            <div id="contacte" class="col-lg-4 col-sm-6">
+          <div class="d-flex flex-wrap justify-content-around">
+            <div id="contacte" class="col-lg-4 col-sm-12">
               <h2 dir="rtl">Contacts Utiles</h2>
               <p dir="rtl" class="num">
                 Numéro économique - Allo veille épidémiologique
@@ -160,31 +155,29 @@
               <h5 class="deko">080 100 47 47</h5>
               <p dir="rtl" class="ace">Aide médicale urgente - Allo SAMU</p>
               <h5 class="deko">141</h5>
-              <p dir="rtl" class="ace">la plateforme téléphonique- Allo 300</p>
+              <p dir="rtl" class="ace">
+                la plateforme téléphonique- Allo 300
+              </p>
               <h5 class="deko">300</h5>
             </div>
-            <div class="col-lg-4 col-sm-6">
-              <ul id="footer-liste" class="list-group list-group-flush">
+            <div class="col-8 col-sm-4 my-auto">
+              <ul class="list-group list-group-flush text-center">
                 <li class="list-group-item one" routerlinkactive="active">
-                  <a href="./index.html" ng-reflect-dir="rtl" class="two">Accueil</a>
+                  <a href="index.html" ng-reflect-dir="rtl" class="two"
+                    >Accueil</a
+                  >
                 </li>
-                <li class="list-group-item one" routerlinkactive="active">
-                  <a href="./conseil.html" ng-reflect-dir="rtl" class="two">Conseils</a>
+                <li class="list-group-item one mb-3" routerlinkactive="active">
+                  <a href="conseil.html" ng-reflect-dir="rtl" class="two">Conseils</a>
                 </li>
               </ul>
             </div>
           </div>
         </div>
       </section>
+      <div id="bottom-line"></div>
     </footer>
-    <div id="bottom-line"></div>
-    
-    <script src="./Assets/JS/test.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./Assets/JS/my-bootstrap.js"></script>
+    <script src="Assets/JS/index.js"></script>
+    <script src="Assets/JS/my-bootstrap.js"></script>
   </body>
 </html>
