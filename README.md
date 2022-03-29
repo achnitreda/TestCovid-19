@@ -4,6 +4,7 @@ ___
 # Projet:
 
 Creation of a quiz that answers 22 questions about your state of health in order to detect a prediction on the result of covid.
+*  [demo:TestCovid19](https://testcovid-taji19.netlify.app/)
 
 ## Team:
 
