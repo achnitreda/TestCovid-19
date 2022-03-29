@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Accueil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="Assets/CSS/style.css"/>
     <link rel="stylesheet" href="Assets/CSS/my-bootstrap.css">
     <link rel="shortcut icon" href="./Assets/Images/Protect.ico" type="image/x-icon" />
@@ -77,8 +78,8 @@
       </nav>
       <!--  DIM   -->
 
-      <div class="dim py-3 px-2 px-sm-3">
-        <h3 class="mb-3">LA DERNIÈRE INFO MÉDICALE</h3>
+      <div class="text-center yellow-clr py-3 px-2 px-sm-3">
+        <h3 class="main-clr mb-3">LA DERNIÈRE INFO MÉDICALE</h3>
         <p class="px-5">
           La prise d'anti-inflammatoires (ibuprofène, cortisone ...) pourrait
           être un facteur d'aggravation de l’infection. En cas de fièvre, prenez
@@ -91,14 +92,14 @@
 
       <div class="d-flex flex-column-reverse flex-md-row my-5 px-5" id="parent">
         <div id="child1">
-          <h2>
+          <h2 class="main-clr fw-bold text-center fs-4 mb-4">
             Vous pensez avoir été exposé au Coronavirus COVID-19 et vous avez
             des symptômes ?
           </h2>
           <div class="d-flex justify-content-center mb-3">
             <img src="Assets/Images/emoji.svg" alt="" />
           </div>
-          <p>
+          <p class="text-center fs-5 fw-bold mb-4 lh-lg green-clr">
             Je reste vigilant ? <br />
             Je programme une téléconsultation ?<br />
             J'appelle le 141 ?<br />
@@ -189,7 +190,7 @@
       </div>
       <!-- Apres Recommandation -->
       <div class="aprecommand d-flex justify-content-center align-items-center flex-column py-5">
-        <p class="text-center fw-bold fs-4 px-3 clr1">
+        <p class="text-center fw-bold fs-4 px-3 main-clr">
           Vous pensez avoir été exposé au Coronavirus COVID-19 et vous avez des
           symptômes ?
         </p>
@@ -213,30 +214,30 @@
             </div>
           </div>
         </section>
-        <section id="liste">
+        <section>
           <div class="container section-container">
             <div class="d-flex flex-wrap justify-content-around">
-              <div id="contacte" class="col-lg-4 col-sm-12">
-                <h2 dir="rtl">Contacts Utiles</h2>
-                <p dir="rtl" class="num">
+              <div class="text-center col-lg-4 col-sm-12">
+                <h2 dir="rtl" class="main-clr fw-bold fs-3">Contacts Utiles</h2>
+                <p dir="rtl" class="fs-6 fw-bold">
                   Numéro économique - Allo veille épidémiologique
                 </p>
-                <h5 class="deko">080 100 47 47</h5>
-                <p dir="rtl" class="ace">Aide médicale urgente - Allo SAMU</p>
-                <h5 class="deko">141</h5>
-                <p dir="rtl" class="ace">
+                <h5 class="vert-number fs-4 fw-bold">080 100 47 47</h5>
+                <p dir="rtl" class="fs-6 fw-bold">Aide médicale urgente - Allo SAMU</p>
+                <h5 class="vert-number fs-4 fw-bold">141</h5>
+                <p dir="rtl" class="fs-6 fw-bold">
                   la plateforme téléphonique- Allo 300
                 </p>
-                <h5 class="deko">300</h5>
+                <h5 class="vert-number fs-4 fw-bold">300</h5>
               </div>
               <div class="col-8 col-sm-4 my-auto">
                 <ul class="list-group list-group-flush text-center">
-                  <li class="list-group-item one" routerlinkactive="active">
-                    <a href="index.html" ng-reflect-dir="rtl" class="fw-bold text-decoration-none fs-5 clr1"
+                  <li class="list-group-item line2" routerlinkactive="active">
+                    <a href="index.html" ng-reflect-dir="rtl" class="fw-bold text-decoration-none fs-5 main-clr"
                       >Accueil</a
                     >
                   </li>
-                  <li class="list-group-item one mb-3" routerlinkactive="active">
+                  <li class="list-group-item line2 mb-3" routerlinkactive="active">
                     <a href="conseil.html" ng-reflect-dir="rtl" class="two">Conseils</a>
                   </li>
                 </ul>
@@ -247,6 +248,7 @@
         <div id="bottom-line"></div>
       </footer>
     </main>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"></script>
       <script src="Assets/JS/my-bootstrap.js"></script>
   </body>
 </html>
